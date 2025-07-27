@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Gillian Cheptoo – My Heart in Full Bloom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            line-height: 1.6;
+            color: #5a4d4d;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffeef7 25%, #f0f4ff 50%, #ffe4e1 75%, #fff0f5 100%);
+            background-size: 400% 400%;
+            animation: backgroundShift 15s ease infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Enhanced Romantic Effects */
+        .petals {
+            position: fixed;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .petal {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(ellipse at center, #ff69b4, #ffb6c1);
+            border-radius: 0 100% 0 100%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+            box-shadow: 0 2px 8px rgba(255, 105, 180, 0.3);
+        }
+
+        .petal:nth-child(2n) {
+            background: radial-gradient(ellipse at center, #ffc0cb, #ffe4e1);
+            animation-delay: -2s;
+            transform: rotate(45deg);
+        }
+
+        .petal:nth-child(3n) {
+            background: radial-gradient(ellipse at center, #dda0dd, #e6e6fa);
+            animation-delay: -4s;
+            transform: rotate(90deg);
+        }
+
+        .petal:nth-child(4n) {
+            background: radial-gradient(ellipse at center, #ffb347, #ffd1dc);
+            animation-delay: -6s;
+            transform: rotate(135deg);
+        }
+
+        .petal:nth-child(5n) {
+            background: radial-gradient(ellipse at center, #ff1493, #ff69b4);
+            animation-delay: -8s;
+            transform: rotate(180deg);
+            width: 22px;
+            height: 22px;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(255, 182, 193, 0.1), rgba(255, 240, 245, 0.3));
+            position: relative;
+        }
+
+        .romantic-image {
+            margin-bottom: 2rem;
+            position: relative;
+            animation: fadeInScale 3s ease-out;
+        }
+
+        .main-photo {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 25px 80px rgba(255, 105, 180, 0.4);
+            filter: brightness(1.15) contrast(1.15) saturate(1.1);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+        }
+
+        .main-photo:hover {
+            transform: scale(1.08);
+            box-shadow: 0 35px 100px rgba(255, 105, 180, 0.5);
+            filter: brightness(1.2) contrast(1.2) saturate(1.2);
+        }
+
+        .romantic-image::after {
+            content: '✨';
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            font-size: 2.5rem;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% { 
+                transform: scale(1.3) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        .romantic-image::before {
+            content: '💕';
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            font-size: 3rem;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .romantic-subtitle {
+            font-size: 1.2rem;
+            color: #d63384;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            animation: fadeInUp 2s ease-out 1.5s both;
+        }
+
+        .welcome-section h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: #d63384;
+            margin-bottom: 1rem;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .welcome-section h2 {
+            font-size: 1.8rem;
+            color: #8b5a5a;
+            margin-bottom: 2rem;
+            font-style: italic;
+            animation: fadeInUp 2s ease-out 0.5s both;
+        }
+
+        .read-heart-btn {
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-family: 'Dancing Script', cursive;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 2s ease-out 1s both;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+        }
+
+        .read-heart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 105, 180, 0.4);
+            background: linear-gradient(45deg, #ff1493, #dc143c);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .section h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Love Letter Section */
+        .love-letter {
+            background: linear-gradient(135deg, #fff8f0, #ffeef7, #fff5f5);
+            border: 4px solid #ffb6c1;
+            border-radius: 25px;
+            padding: 60px;
+            margin: 50px 0;
+            box-shadow: 0 20px 60px rgba(255, 182, 193, 0.3);
+            position: relative;
+            overflow: hidden;
+            background-size: 200% 200%;
+            animation: letterGlow 8s ease infinite;
+        }
+
+        @keyframes letterGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                box-shadow: 0 20px 60px rgba(255, 182, 193, 0.3);
+            }
+            50% { 
+                background-position: 100% 50%;
+                box-shadow: 0 25px 70px rgba(255, 105, 180, 0.4);
+            }
+        }
+
+        .love-letter::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 120px;
+            height: 120px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 85L20 55C10 45 10 30 25 25C35 20 45 25 50 35C55 25 65 20 75 25C90 30 90 45 80 55L50 85Z" fill="%23ff69b4" opacity="0.15"/></svg>') no-repeat;
+            background-size: contain;
+            animation: floatHeart 4s ease-in-out infinite;
+        }
+
+        @keyframes floatHeart {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .love-letter::after {
+            content: '🌹';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            font-size: 4rem;
+            opacity: 0.2;
+            animation: roseFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes roseFloat {
+            0%, 100% { transform: translateY(0px) rotate(-5deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .love-letter p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #5a4d4d;
+        }
+
+        .signature {
+            text-align: right;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #d63384;
+            margin-top: 2rem;
+        }
+
+        /* Memory Gallery */
+        .memory-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin: 50px 0;
+        }
+
+        .memory-card {
+            background: linear-gradient(135deg, #fff5f5, #ffeef7);
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: 0 15px 45px rgba(255, 105, 180, 0.2);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .memory-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #ff69b4, #ff1493, #dc143c, #ff69b4);
+            background-size: 400% 400%;
+            border-radius: 25px;
+            z-index: -1;
+            animation: gradientShift 6s ease infinite;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .memory-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(255, 105, 180, 0.35);
+            border-color: rgba(255, 105, 180, 0.5);
+        }
+
+        .featured-memory {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1, #ffd1dc);
+            border: 4px solid #ff69b4;
+        }
+
+        .memory-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+            filter: brightness(1.05) contrast(1.1) saturate(1.1);
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
+
+        .featured-memory .memory-image {
+            height: 350px;
+        }
+
+        .memory-image:hover {
+            transform: scale(1.05);
+            filter: brightness(1.15) contrast(1.2) saturate(1.2);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .memory-caption {
+            font-style: italic;
+            text-align: center;
+            color: #8b5a5a;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .featured-memory .memory-caption {
+            font-size: 1.4rem;
+            color: #d63384;
+            font-weight: 600;
+        }
+
+        /* Reasons List */
+        .reasons-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reasons-list li {
+            font-size: 1.4rem;
+            margin: 25px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff5f5, #ffeef7);
+            border-radius: 15px;
+            border-left: 5px solid #ff69b4;
+            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .reasons-list li:hover {
+            transform: translateX(10px);
+        }
+
+        .flower-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        /* Music Section */
+        .music-section {
+            background: linear-gradient(135deg, #f0f4ff, #ffeef7, #fff5f5);
+            border-radius: 25px;
+            padding: 50px;
+            text-align: center;
+            margin: 50px 0;
+            position: relative;
+            overflow: hidden;
+            background-size: 200% 200%;
+            animation: musicGlow 10s ease infinite;
+            box-shadow: 0 20px 50px rgba(255, 182, 193, 0.3);
+        }
+
+        @keyframes musicGlow {
+            0%, 100% { 
+                background-position: 0% 50%;
+                box-shadow: 0 20px 50px rgba(255, 182, 193, 0.3);
+            }
+            50% { 
+                background-position: 100% 50%;
+                box-shadow: 0 25px 60px rgba(255, 105, 180, 0.4);
+            }
+        }
+
+        .music-section h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #d63384;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(255, 105, 180, 0.3);
+        }
+
+        .musical-heart-animation {
+            position: relative;
+            margin: 40px 0;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dancing-notes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .note {
+            position: absolute;
+            font-size: 2.5rem;
+            color: #ff69b4;
+            opacity: 0.8;
+            animation: danceNote 4s ease-in-out infinite;
+        }
+
+        .note:nth-child(1) {
+            left: 10%;
+            top: 20%;
+            animation-delay: 0s;
+            color: #ff1493;
+        }
+
+        .note:nth-child(2) {
+            left: 25%;
+            top: 60%;
+            animation-delay: 0.7s;
+            color: #ff69b4;
+        }
+
+        .note:nth-child(3) {
+            right: 25%;
+            top: 30%;
+            animation-delay: 1.4s;
+            color: #dda0dd;
+        }
+
+        .note:nth-child(4) {
+            right: 10%;
+            top: 70%;
+            animation-delay: 2.1s;
+            color: #ff1493;
+        }
+
+        .note:nth-child(5) {
+            left: 50%;
+            top: 10%;
+            animation-delay: 2.8s;
+            color: #ff69b4;
+        }
+
+        .note:nth-child(6) {
+            left: 50%;
+            bottom: 10%;
+            animation-delay: 3.5s;
+            color: #dda0dd;
+        }
+
+        @keyframes danceNote {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.6;
+            }
+            25% {
+                transform: translateY(-20px) rotate(10deg) scale(1.2);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10px) rotate(-5deg) scale(1.1);
+                opacity: 0.8;
+            }
+            75% {
+                transform: translateY(-25px) rotate(15deg) scale(1.3);
+                opacity: 1;
+            }
+        }
+
+        .beating-heart {
+            font-size: 4rem;
+            animation: heartPulse 2s ease-in-out infinite;
+            z-index: 10;
+            filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.6));
+        }
+
+        @keyframes heartPulse {
+            0%, 100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.6));
+            }
+            50% {
+                transform: scale(1.3);
+                filter: drop-shadow(0 0 30px rgba(255, 105, 180, 0.9));
+            }
+        }
+
+        .romantic-text {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+        }
+
+        .romantic-text p {
+            font-style: italic;
+            color: #d63384;
+            font-size: 1.1rem;
+            margin: 5px 0;
+            opacity: 0;
+            animation: fadeInText 3s ease-in-out infinite;
+        }
+
+        .romantic-text p:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .romantic-text p:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .romantic-text p:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        @keyframes fadeInText {
+            0%, 80%, 100% { opacity: 0; transform: translateY(10px); }
+            10%, 70% { opacity: 1; transform: translateY(0px); }
+        }
+
+        .song-list {
+            margin: 20px 0;
+        }
+
+        .song-item {
+            font-size: 1.1rem;
+            margin: 8px 0;
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 25px;
+            display: inline-block;
+            margin: 5px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .song-item:hover {
+            background: rgba(255, 105, 180, 0.1);
+            transform: translateY(-3px);
+            border-color: rgba(255, 105, 180, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+        }
+
+        .playlist-note {
+            font-style: italic;
+            color: #8b5a5a;
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 240, 245, 0.9));
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border-left: 5px solid #ff69b4;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.2);
+        }
+
+        /* Bloom Again Section */
+        .bloom-again {
+            text-align: center;
+            background: linear-gradient(135deg, #fff8f0, #fff5f5);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            position: relative;
+        }
+
+        .bloom-again::before {
+            content: '🌸';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            background: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .bloom-again p {
+            font-size: 1.5rem;
+            color: #5a4d4d;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .bloom-btn {
+            padding: 18px 45px;
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-family: 'Dancing Script', cursive;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
+
+        .bloom-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #ffeef7, #f0f4ff);
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path d="M0,10 Q25,0 50,10 T100,10 L100,20 L0,20 Z" fill="%23ffb6c1" opacity="0.3"/></svg>') repeat-x;
+            background-size: 100px 20px;
+        }
+
+        .footer p {
+            font-size: 1.2rem;
+            color: #8b5a5a;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: #d63384;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .welcome-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .welcome-section h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section {
+                padding: 60px 15px;
+            }
+            
+            .love-letter {
+                padding: 30px 25px;
+            }
+            
+            .section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .memory-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Falling Petals -->
+    <div class="petals">
+        <div class="petal" style="left: 5%; animation-duration: 8s;"></div>
+        <div class="petal" style="left: 15%; animation-duration: 10s;"></div>
+        <div class="petal" style="left: 25%; animation-duration: 7s;"></div>
+        <div class="petal" style="left: 35%; animation-duration: 12s;"></div>
+        <div class="petal" style="left: 45%; animation-duration: 9s;"></div>
+        <div class="petal" style="left: 55%; animation-duration: 11s;"></div>
+        <div class="petal" style="left: 65%; animation-duration: 8s;"></div>
+        <div class="petal" style="left: 75%; animation-duration: 10s;"></div>
+        <div class="petal" style="left: 85%; animation-duration: 9s;"></div>
+        <div class="petal" style="left: 95%; animation-duration: 7s;"></div>
+        <div class="petal" style="left: 10%; animation-duration: 13s;"></div>
+        <div class="petal" style="left: 30%; animation-duration: 6s;"></div>
+        <div class="petal" style="left: 50%; animation-duration: 14s;"></div>
+        <div class="petal" style="left: 70%; animation-duration: 8s;"></div>
+        <div class="petal" style="left: 90%; animation-duration: 11s;"></div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="romantic-image">
+            <img src="https://i.postimg.cc/3wGfqRRv/IMG-20240915-WA0017.jpg" alt="Beautiful moment together" class="main-photo">
+        </div>
+        <h1>To Gillian, With All My Love</h1>
+        <h2>I miss you more than words will ever say.</h2>
+        <p class="romantic-subtitle">Your smile still lights up my darkest days ✨</p>
+        <button class="read-heart-btn" onclick="document.getElementById('love-letter').scrollIntoView()">Read My Heart</button>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="section" id="love-letter">
+        <h2>💌 My Heart's Letter</h2>
+        <div class="love-letter">
+            <p>My dearest Gillian,</p>
+            
+            <p>Since you've been gone, the world feels like a garden without its most beautiful flower. I find myself remembering your laugh in quiet moments, the way your eyes sparkled when you talked about your dreams, the way you made even ordinary moments feel magical.</p>
+            
+            <p>I know I wasn't perfect, and I know we had our storms. But my love for you was — and still is — real, deep, and growing like wildflowers in spring. Every day without you teaches me more about how precious what we had truly was.</p>
+            
+            <p>I dream of your voice calling my name, I wake up reaching for your hand, I find myself saving funny moments to share with you. You're woven into every corner of my heart, every beat of my soul.</p>
+            
+            <p>I don't need us to be what we were before. Maybe we could start as close friends, sharing coffee and conversations, rebuilding trust one gentle moment at a time. Maybe friendship could bloom into something even more beautiful than what we had.</p>
+            
+            <p>If there's even a whisper in your heart that remembers our love... I'm here. Patient, hopeful, and loving you more deeply than ever before.</p>
+            
+            <div class="signature">
+                Yours, always —<br>
+                Michael ❤️
+            </div>
+        </div>
+    </section>
+
+    <!-- Garden of Memories -->
+    <section class="section">
+        <h2>🌷 A Garden of Memories</h2>
+        <div class="memory-gallery">
+            <div class="memory-card featured-memory">
+                <img src="https://i.postimg.cc/TwLb0LYz/IMG-20240906-WA0046.jpg" alt="Beautiful Gillian" class="memory-image">
+                <p class="memory-caption">"The way you lit up talking about wildflowers - your smile could make any garden jealous"</p>
+            </div>
+            <div class="memory-card">
+                <img src="https://i.postimg.cc/tCH6dg0c/IMG-20240906-WA0047.jpg" alt="Sweet moment" class="memory-image">
+                <p class="memory-caption">"Your grace and elegance takes my breath away every single time"</p>
+            </div>
+            <div class="memory-card">
+                <img src="https://i.postimg.cc/zDwvrSMd/IMG-20240908-WA0060.jpg" alt="Precious memory" class="memory-image">
+                <p class="memory-caption">"I never felt more at home than in your presence, in your light"</p>
+            </div>
+            <div class="memory-card">
+                <img src="https://i.postimg.cc/brgBRBvV/IMG-20240910-WA0022.jpg" alt="Beautiful soul" class="memory-image">
+                <p class="memory-caption">"Your smile was my favorite sunrise, your laugh my sweetest melody"</p>
+            </div>
+            <div class="memory-card">
+                <img src="https://i.postimg.cc/sD6VjnJJ/IMG-20240915-WA0004.jpg" alt="Radiant beauty" class="memory-image">
+                <p class="memory-caption">"The way you made even ordinary moments feel like pure magic"</p>
+            </div>
+            <div class="memory-card">
+                <img src="https://i.postimg.cc/rpR7Ljhz/IMG-20240920-WA0000.jpg" alt="Unforgettable moment" class="memory-image">
+                <p class="memory-caption">"Every moment with you felt like coming home to paradise"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why I'm Still in Love -->
+    <section class="section">
+        <h2>🌹 Why I'm Still in Love with You</h2>
+        <ul class="reasons-list">
+            <li><span class="flower-icon">🌼</span> You made me believe in something real, in magic, in forever</li>
+            <li><span class="flower-icon">🌺</span> Your heart is gentler than any petal, your soul more radiant than sunlight</li>
+            <li><span class="flower-icon">🌸</span> I miss your kindness, your brilliant mind, the way you see beauty everywhere</li>
+            <li><span class="flower-icon">🌹</span> Loving you was like breathing — natural, essential, life-giving</li>
+            <li><span class="flower-icon">🌻</span> You see the extraordinary in the ordinary — especially in me</li>
+            <li><span class="flower-icon">🌷</span> With you, I became the best version of myself, the man I was meant to be</li>
+            <li><span class="flower-icon">🏵️</span> Your love taught me what home really means — it's wherever you are</li>
+            <li><span class="flower-icon">🌺</span> Even as friends, you would still be the most precious person in my world</li>
+        </ul>
+    </section>
+
+    <!-- Song Section -->
+    <section class="section">
+        <div class="music-section">
+            <h2>🎶 Song for You</h2>
+            <h3>"If My Heart Could Sing, It Would Sing This to You"</h3>
+            <div class="musical-heart-animation">
+                <div class="dancing-notes">
+                    <span class="note">♪</span>
+                    <span class="note">♫</span>
+                    <span class="note">♪</span>
+                    <span class="note">♬</span>
+                    <span class="note">♫</span>
+                    <span class="note">♪</span>
+                </div>
+                <div class="beating-heart">💖</div>
+                <div class="romantic-text">
+                    <p>Every love song reminds me of you...</p>
+                    <p>Every melody carries your name in its rhythm...</p>
+                    <p>Every note whispers the words I long to say...</p>
+                </div>
+            </div>
+            <p>This melody carries all the words I wish I could whisper to you under the stars...</p>
+            <div class="playlist-note">
+                <p><strong>Songs That Remind Me of You:</strong></p>
+                <div class="song-list">
+                    <p class="song-item">🎵 "All of Me" by John Legend</p>
+                    <p class="song-item">🎵 "Perfect" by Ed Sheeran</p>
+                    <p class="song-item">🎵 "A Thousand Years" by Christina Perri</p>
+                    <p class="song-item">🎵 "Best Part" by Daniel Caesar & H.E.R.</p>
+                    <p class="song-item">🎵 "Come Away With Me" by Norah Jones</p>
+                    <p class="song-item">🎵 "Make You Feel My Love" by Adele</p>
+                </div>
+                <p><em>Each song a love letter, each melody a memory of us dancing in the kitchen, laughing until dawn, finding home in each other's arms.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloom Again Section -->
+    <section class="section">
+        <div class="bloom-again">
+            <p>I don't need us to rush back to where we were. Sometimes the most beautiful gardens grow slowly, starting with a single seed of friendship.</p>
+            <p>Maybe we could begin with coffee and conversations, shared laughter and gentle moments, rebuilding what we had into something even more beautiful.</p>
+            <p>Whether as friends who care deeply for each other, or as souls finding their way back to love — I just want you in my life again.</p>
+            <button class="bloom-btn" onclick="playRomanticMessage()">Let's Start with Friendship 🌸</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>This page is just a seed of everything I still feel for you.</p>
+        <p>If you ever want to talk — I'm here, with love.</p>
+        <p class="signature">– Michael 🌹</p>
+    </footer>
+
+    <script>
+        // Enhanced petal creation with more variety
+        function createPetal() {
+            const petalsContainer = document.querySelector('.petals');
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            
+            // Random positioning and styling
+            petal.style.left = Math.random() * 100 + '%';
+            petal.style.animationDuration = (Math.random() * 6 + 6) + 's';
+            petal.style.animationDelay = Math.random() * 3 + 's';
+            
+            // Random petal colors and sizes
+            const colors = [
+                'radial-gradient(ellipse at center, #ff69b4, #ffb6c1)',
+                'radial-gradient(ellipse at center, #ffc0cb, #ffe4e1)',
+                'radial-gradient(ellipse at center, #dda0dd, #e6e6fa)',
+                'radial-gradient(ellipse at center, #ffb347, #ffd1dc)',
+                'radial-gradient(ellipse at center, #ff1493, #ff69b4)'
+            ];
+            
+            petal.style.background = colors[Math.floor(Math.random() * colors.length)];
+            petal.style.width = (Math.random() * 8 + 15) + 'px';
+            petal.style.height = (Math.random() * 8 + 15) + 'px';
+            petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+            
+            petalsContainer.appendChild(petal);
+
+            // Remove petal after animation
+            setTimeout(() => {
+                if (petalsContainer.contains(petal)) {
+                    petalsContainer.removeChild(petal);
+                }
+            }, 15000);
+        }
+
+        // Create more frequent petals
+        setInterval(createPetal, 400);
+
+        // Create floating hearts occasionally
+        function createFloatingHeart() {
+            const heart = document.createElement('div');
+            heart.textContent = Math.random() > 0.5 ? '💕' : '💖';
+            heart.style.cssText = `
+                position: fixed;
+                left: ${Math.random() * 100}%;
+                top: 100vh;
+                font-size: ${Math.random() * 20 + 25}px;
+                z-index: -1;
+                pointer-events: none;
+                animation: floatUp ${Math.random() * 4 + 8}s linear forwards;
+                opacity: 0.6;
+            `;
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                if (document.body.contains(heart)) {
+                    document.body.removeChild(heart);
+                }
+            }, 12000);
+        }
+        
+        // Add floating hearts style
+        const heartStyle = document.createElement('style');
+        heartStyle.textContent = `
+            @keyframes floatUp {
+                0% { 
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 0.6;
+                }
+                50% {
+                    opacity: 0.8;
+                }
+                100% { 
+                    transform: translateY(-120vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(heartStyle);
+        
+        // Create floating hearts occasionally
+        setInterval(createFloatingHeart, 3000);
+
+        function playRomanticMessage() {
+            const messages = [
+                "My heart is open, Gillian. Maybe we could start with a simple coffee and see where friendship takes us? 💕",
+                "I believe in second chances, in new beginnings, in the magic of what we could build together. Call me when you're ready. 🌸",
+                "Whether as friends or something more, I just want you back in my life. You mean everything to me. ✨"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            
+            // Create a beautiful alert-style modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 182, 193, 0.9);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                font-family: 'Dancing Script', cursive;
+                backdrop-filter: blur(5px);
+            `;
+            
+            modal.innerHTML = `
+                <div style="
+                    background: linear-gradient(135deg, white, #fff5f5);
+                    padding: 50px;
+                    border-radius: 25px;
+                    text-align: center;
+                    max-width: 600px;
+                    box-shadow: 0 25px 80px rgba(255, 105, 180, 0.4);
+                    border: 4px solid #ffb6c1;
+                    position: relative;
+                    overflow: hidden;
+                ">
+                    <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-size: 3rem;">💌</div>
+                    <h3 style="color: #d63384; font-size: 2.5rem; margin-bottom: 25px; margin-top: 20px;">From My Heart</h3>
+                    <p style="font-size: 1.4rem; color: #5a4d4d; line-height: 1.8; margin-bottom: 30px;">${randomMessage}</p>
+                    <button onclick="this.parentElement.parentElement.remove()" style="
+                        background: linear-gradient(45deg, #ff69b4, #ff1493);
+                        color: white;
+                        border: none;
+                        padding: 15px 35px;
+                        border-radius: 50px;
+                        font-size: 1.3rem;
+                        cursor: pointer;
+                        font-family: 'Dancing Script', cursive;
+                        transition: all 0.3s ease;
+                        box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+                    " onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Close 💕</button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Add click outside to close
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+
+        // Smooth scroll for buttons
+        document.querySelector('.read-heart-btn').addEventListener('click', function() {
+            document.getElementById('love-letter').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        // Add gentle floating animation to memory cards
+        document.querySelectorAll('.memory-card').forEach((card, index) => {
+            card.style.animationDelay = (index * 0.2) + 's';
+        });
+
+        // Add entrance animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 1s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
